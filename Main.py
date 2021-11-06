@@ -16,7 +16,6 @@ from listTask import *
 print(sys.path)
 
 print(colored(os.getpid(), 'red'))
-
 locateProcess(os.getpid())
 
 hkeyid = Wintools.getHKEYid()

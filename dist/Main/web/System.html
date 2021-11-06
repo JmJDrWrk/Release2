@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOai Custom Windows Tool</title>
+    <link rel="icon" href="data:image/png;base64,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">
+    <link rel="stylesheet" href="System.css">
+    <link rel="stylesheet" href="background.css">
+    <script src="index.js"></script>
+    <script type="text/javascript" src="eel.js"></script>
+    <script>
+        async function sendCommand(command) {
+            command2 = document.getElementById('commandtosend').value
+            //let value = await eel.receiveCommand(command)(); SEND RECEIVED PARAMETER
+            //Recoger value2 esperando respuesta de ... que tiene parametro (...) y metodo()
+            let value2 = await eel.receiveCommand(command2)(); //SEND INPUT TEXT
+            alert(value2);
+                
+            }
+    </script>
+</head>
+<body>
+    <div class='backimage'>
+
+
+    <div class="menu_container">
+        <!-- LEFT MENU -->
+        <div class="left_menu_container">
+            <div class="btncontainer">
+                <div class="btn btn1"></div>
+                <div class="btn btn2"></div>
+                <div class="btn btn3"></div>
+            </div>
+
+            <div class="left_menu">
+                <div class="left_menu_items" onclick="loadRighMenus('.right_menu_panel','id_system')">System</div>
+                <div class="left_menu_items" onclick="loadRighMenus('.right_menu_panel','id_services')">Services</div>
+                <div class="left_menu_items" onclick="loadRighMenus('.right_menu_panel','id_customization')">Personalización</div>
+                <div class="left_menu_items">Redes e internet</div>
+                <div class="left_menu_items">Aplicaciones</div>
+                <div class="left_menu_items">Rendimiento</div>
+                <div class="left_menu_items">Acerca de</div>
+                <div class="left_menu_items">Rasdernet</div>
+                <div class="left_menu_items">Moai Custom Tool Settings</div>
+                <div class="left_menu_items" onclick="loadRighMenus('.right_menu_panel','id_login')">Log in</div>
+            </div>
+        </div>
+
+
+        <!-- RIGHT MENU -->
+
+        <div class="right_menu">
+
+
+            <!-- ID SYSTEM -->
+            <div class="right_menu_panel" id="id_system">
+                <!-- <h1>SERVICES</h1> -->
+                <h3>SYSTEM</h3>
+                
+                <div class="combobox1"> 
+                    <label for="mag">SEARCH WITH BING</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+
+                <div class="combobox1"> 
+                    <label for="mag">ONE DRIVE</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+                <div class="combobox1"> 
+                    <label for="mag">HIDE WINDOWS ON SHAKING</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">mezclador</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">
+
+                    <div id='explorer_menu'>
+
+                        <div id='explorer_menu_item'>Propiedades</div>
+                        <div id='explorer_menu_item'>Ejecutar como administrador</div>
+                        <div id='explorer_menu_item'>Abrir con</div>
+                        <div id='explorer_menu_item'>Opciones Avanzadas</div>                                
+
+                    </div>
+                    
+                </div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">mezclador</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">Dj desk</div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">mezclador</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">Dj desk</div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+
+
+            </div>  
+            <!-- FIN ID SYSTEM -->
+
+
+
+            <!-- ID SERVICES -->
+            <div class="right_menu_panel" id="id_services">
+                <!-- <h1>SERVICES</h1> -->
+                <h3>SERVICES</h3>
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">Reproducir video sin marcos</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">Dj desk</div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="combobox1"> 
+                    <label for="mag">SEARCH WITH BING</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+
+                <div class="combobox1"> 
+                    <label for="mag">ONE DRIVE</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+                
+
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">mezclador</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">Dj desk</div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('pantalla')">mezclador</div>
+                <div class="right_menu_panel_items" onclick="switchHTML('sonido')">Rupencio</div>
+                <div class="right_menu_panel_items">Dj desk</div>
+                <div class="right_menu_panel_items">Super Volumen</div>
+                <div class="right_menu_panel_items">db killers</div>
+                <div class="right_menu_panel_items">Bombobox rock fm</div>
+
+
+            </div>  
+            <!-- FIN ID SERVICES -->
+            <div class="right_menu_panel" id='id_customization'>
+                    <h3>CUSTOMIZATION</h3>
+                
+                <div class="combobox1"> 
+                    <label for="mag">TRANSPARENT TASKBAR</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>   
+
+                <div class="combobox1"> 
+                    <label for="mag">ALLOW FONT SELECTION</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>  
+
+                <div class="combobox1"> 
+                    <label for="mag">USE FULL TRANSPARENCY EVERYWHERE</label>
+                    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap" rel="stylesheet">
+                    <select name="mag" id="mag">
+                        <option value='enabled'>enabled</option>
+                        <option value='disabled'>disabled</option>
+                        <!-- <option value='orange'>Orange</option> -->
+                    </select>
+                    <!-- <label style="top: 20px" for="mag">Fruits</label> -->
+                </div>
+            </div>   
+            <!-- FIN ID CUSTOMIZATION -->
+
+
+
+            <!-- ID LOG IN -->
+            <div class='right_menu_panel' id='id_login'>
+                <div class="login">
+                    <h1>Login</h1>
+                    <form method="post">
+                      <input type="text" name="u" placeholder="Username" required="required" />
+                      <input type="password" name="p" placeholder="Password" required="required" />
+                      <button type="submit" class="btn btn-primary btn-block btn-large"></button>
+                    </form>
+                  </div>
+
+                  <div class='profilephoto'>
+                      
+                  </div>
+                  <button onclick="sendCommand('Hello Python!!')">SEND COMMAND TO PYTHON</button>
+        
+                  <input type="text" id='commandtosend'>
+          
+                  <div>
+                      <code>
+                          This commands are sended from javascript to python using Eel as python module.
+                          Every method must be declared in scipt tag not in a external js file.
+          
+                          Then all method with interaction avaliable have to be declared as @exposed
+                      </code>
+                  </div>
+            </div>
+            <!-- FIN ID LOGIN -->
+            
+
+        </div>
+
+
+
+
+    </div>
+
+<h1 onclick="returnIndex()">System HTML file, Click to return to index</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+.backimage{
+    background-image: url('http://localhost:7654/bkcj.jpg');
+    backdrop-filter: blur(6px);
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0px;
+    }
+
+body{
+    background-image: url('http://localhost:7654/bkcj.jpg');
+    backdrop-filter: blur(600px);
+    margin: 0px;
+    }
