@@ -17,9 +17,25 @@ class CssWriter():
         #backpath = 'file:///'+FILEPATH.replace('\\','/')
         
         backpath = f'http://localhost:{PORT}/{FILENAME}'
-        print(colored(f'backpath: {backpath}', 'yellow'))
+        #print(colored(f'backpath: {backpath}', 'yellow'))
 
         cssCode = 'body{'+f"\n  background-image: url('{backpath}');\n"+ "  backdrop-filter: blur(6px);"+'\n}'
+        cssCode = '''
+.backimage{
+    background-image: url('http://localhost:7654/bkcj.jpg');
+    backdrop-filter: blur(6px);
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0px;
+    }
+
+body{
+    background-image: url('http://localhost:7654/bkcj.jpg');
+    backdrop-filter: blur(600px);
+    margin: 0px;
+    }
+'''
+
         try:
             with open('web/background.css', 'w') as file:  
                 file.write(cssCode)
@@ -29,3 +45,4 @@ class CssWriter():
             state = 'notWritten\n'
 
         return state + cssCode
+

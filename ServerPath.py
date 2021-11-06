@@ -14,7 +14,7 @@ class ServerPath():
             #print(colored(f'SERVER at port: {PORT}', 'cyan'))
             basepath = PATH.replace(("\\"+os.path.basename(PATH)), "")
             server_setup = f'cd \\ && cd {basepath} && python -m http.server {PORT}'
-            print(colored(server_setup, 'red'))
+            #print(colored(server_setup, 'red'))
             #os.chdir(basepath)
             # subprocess.Popen(server_setup,shell=True,stdout=subprocess.STDOUT,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
             subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
