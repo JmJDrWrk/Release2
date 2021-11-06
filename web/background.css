@@ -1,0 +1,4 @@
+body{
+  background-image: url('http://localhost:7654/bkcj.jpg');
+  backdrop-filter: blur(6px);
+}
