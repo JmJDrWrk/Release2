@@ -3,10 +3,14 @@ import eel
 from termcolor import colored
 import subprocess
 import win32comext.shell.shell as shell
+import sys
 
 class GuiManager():
     def manage(guidir, guimain):
         #eel.init('web')
+        print(f'guimain: {guimain} guidir: {guidir}')
+        print(f'osgetcwd: {os.getcwd()}')
+        print(f'realpath: {os.path.normpath(sys.argv[0])}')
         eel.init(guidir)
         @eel.expose
         def receiveCommand(command):
@@ -92,5 +96,10 @@ class GuiManager():
         #print(colored('EEL SERVER: ', 'magenta'), colored('ON','green'))#, print(colored('on', 'green'))
         
         # eel.start('System.html')
-        eel.start(guimain)
-        return(colored('EEL SERVER: ', 'magenta'), colored('ON','green'))
+        try:
+            result = 'Server Executed'
+            eel.start(guimain)
+        except:
+            result = 'Error'
+        return result
+        #return(colored('EEL SERVER: ', 'magenta'), colored('ON','green'))

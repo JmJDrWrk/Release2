@@ -1,17 +1,23 @@
-#import sys
-#import os
-#import subprocess
-#from threading import Thread
+import sys
+import os
+import subprocess
+from threading import Thread
 from termcolor import colored
-#import time
-#import win32comext.shell.shell as shell
-#import eel
+import time
+import win32comext.shell.shell as shell
+import eel
 #Home imports
 from Wintools import *
 from ServerPath import *
 from CssWriter import *
 from GuiManager import *
+from listTask import *
 
+print(sys.path)
+
+print(colored(os.getpid(), 'red'))
+
+locateProcess(os.getpid())
 
 hkeyid = Wintools.getHKEYid()
 print(colored('hkeyid: ', 'blue'), colored(hkeyid, 'cyan'))
