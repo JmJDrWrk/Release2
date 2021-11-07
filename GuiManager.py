@@ -4,13 +4,14 @@ from termcolor import colored
 import subprocess
 import win32comext.shell.shell as shell
 import sys
+from threading import Thread
 
 class GuiManager():
     def manage(guidir, guimain):
         #eel.init('web')
-        print(f'guimain: {guimain} guidir: {guidir}')
-        print(f'osgetcwd: {os.getcwd()}')
-        print(f'realpath: {os.path.normpath(sys.argv[0])}')
+        #print(f'guimain: {guimain} guidir: {guidir}')
+        #print(f'osgetcwd: {os.getcwd()}')
+        #print(f'realpath: {os.path.normpath(sys.argv[0])}')
         eel.init(guidir)
         @eel.expose
         def receiveCommand(command):
@@ -97,9 +98,10 @@ class GuiManager():
         
         # eel.start('System.html')
         try:
-            result = 'Server Executed'
-            eel.start(guimain)
+            result = colored('SERVER STATE: ', 'magenta') + colored('ON', 'green') + colored('\nGUI STATE: ', 'magenta') + colored('ON', 'green')
+            print(result)
+            Thread(target=eel.start(guimain))
         except:
-            result = 'Error'
-        return result
+            result = colored('Error: The gui has stopped\n','red') + colored('GUI STATE: ', 'magenta') + colored('OFF', 'red') + colored('\nShutting down server...\n','red') + colored('CODE: 0000', 'yellow') 
+            return result
         #return(colored('EEL SERVER: ', 'magenta'), colored('ON','green'))

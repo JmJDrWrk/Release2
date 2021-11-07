@@ -1,14 +1,12 @@
-
-.backimage{
-    background-image: url('http://localhost:7654/bkcj.jpg');
-    backdrop-filter: blur(6px);
-    max-width: 100%;
-    max-height: 100%;
-    margin: 0px;
-    }
-
-body{
-    background-image: url('http://localhost:7654/bkcj.jpg');
-    backdrop-filter: blur(600px);
-    margin: 0px;
-    }
+/*NEW WRITE*/
+body, html{
+   background-image: url('https://www.teahub.io/photos/full/33-334325_windows-10-default-background-black.png');
+   max-width: 100%;
+   max-height: 100%;
+   margin: 0px;
+   background-size:     cover   ;
+   background-repeat:   no-repeat;
+   background-position: center center;
+   padding-bottom: 0px;
+   height: 99%;
+}

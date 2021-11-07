@@ -13,7 +13,8 @@ from CssWriter import *
 from GuiManager import *
 from listTask import *
 
-print(sys.path)
+for line in sys.path: 
+    print(colored(line, 'blue'))
 
 print(colored(os.getpid(), 'red'))
 locateProcess(os.getpid())
@@ -27,7 +28,8 @@ print(colored('bakpath: ', 'blue'), colored(backpath, 'cyan'))
 serverState = ServerPath.ServePathAtNewThread(backpath,'7654')
 print(colored('PATH SERVER: ', 'magenta'), colored(serverState, 'green'))
 
-cssCode = CssWriter.writeBackgroundCss(backpath,'7654')
+cssWr = CssWriter('web/background.css')
+cssCode = cssWr.writeCssBackground(backpath,'7654')
 print(colored('cssCode: ', 'blue'), colored(cssCode, 'cyan'))
 
 
@@ -36,3 +38,6 @@ guimain = 'System.html'
 state = GuiManager.manage(guidir, guimain)
 
 print(state)
+if(state.endswith(colored('CODE: 0000', 'yellow'))):
+    print(colored('SERVER STATE: ', 'magenta') + colored('OFF', 'red'))
+    os._exit(0)

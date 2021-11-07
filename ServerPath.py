@@ -17,7 +17,10 @@ class ServerPath():
             #print(colored(server_setup, 'red'))
             #os.chdir(basepath)
             # subprocess.Popen(server_setup,shell=True,stdout=subprocess.STDOUT,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
-            subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
+            try:
+                subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
+            except:
+                print(colored('Error Serving image', 'red'))
             #os.system(f'python -m http.server {PORT}')
 
         try:
