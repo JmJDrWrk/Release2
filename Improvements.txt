@@ -37,3 +37,21 @@ PROBLEMA DE COMPILACION DEL MODULO eel
 -- No se ha desarrollado todavia ningun comportamiento real asi como ninguna base de datos util
 -- La gui en forma de html,css y js permanece en fase de desarrollo
 
+-- Esquema de arhivos-comportamientos
+--Main.py-->Main.exe
+
+--                  ServerPath.py   {Servir imagen de fondo para que sea accedida por background.css}
+--                  CssWriter.py    {Crear background.css apuntando a la url servida para usar en la gui}  
+--                  Wintools.py     {Clase de herramientas de comunicacion con windows para obtener iformación del OS}
+--                  GuiManager.py   {Servidor final de la gui y manejador de comportamientos}
+--                  listTask.py     {Encontrar el pid del gui para poder controlar su cierre}
+
+--                  web             {Todo lo referente a la gui y lang web está contenido en este directorio}
+                                    --System.html   {Es el main del gui}
+                                    --System.css    {Es el archivo de css no modificable}
+                                    --index.js      {En lenguaje javascript se comunica directamente con main.py}
+                                    --background.css{Se escribe en cada ejecución, puede prgramarse en tiempo real pero no es aconsejable}
+
+            
+--Compilador.bat {Archivo ejecutable por lotes que agiliza la compilacion del proyecot: apunta a Main.py}
+
