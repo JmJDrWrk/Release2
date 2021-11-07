@@ -1,0 +1,39 @@
+Añadir recopilado en anteriores documentos y Readme(s)
+
+PROBLEMA DE COMPILACION DEL MODULO eel
+--  Para poder compilar proyectos que implementen Eel es necesario hacer uso de python -m eel Main.py web
+-- ;usando auto-py-to-exe de modo estandar no funcionará
+
+
+-- CLASE ServerPath
+-- Para solventar el poder acceder a la imagen de fondo (ruta absoluta) al hacer uso del modulo Eel, se utiliza como path
+-- la ruta a la imagen cuando es servida a través de python -m http.server <PORT>
+
+    prob:   No poder hacer un cd <filepath> concatenado a python -m http.server <PORT> 
+    prob:   os.system(f'python -m http.server {PORT}')
+    sol:    subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
+    obv:    no se puede usar chdir por que cambia la ruta de ejecución abstracta del archivo
+
+-- CLASE GuiManager
+-- Se encuentra realmente la parte del servidor que se apoya en el modulo eel para la parte de comunicacion
+-- entre python y javascript.
+-- El comportamiento y desempeño de la app estará principalmente desarrollado en esa misma clase, con la posibilidad de
+-- de apoyarse en otras clases de creacion propias importadas
+-- Revisar si con pyInstaller se importarán las clases o hay que declararlas en el main
+
+--Nota : El main actuará tansolo como lanzador ordenado de metodos y clases
+
+-- CLASE CssWriter
+-- Ha pasado de estar enfocada al cumplimiendo de un metodo especifico a permitir escribir css 
+-- en forma de concatenacion de elementos 
+
+-- Clase ListTasks
+-- Es una idea a medias que pretende localizar la aplicación escuchando los nuevos pid para diferenciarlos del resto
+-- de las ventanas
+-- NO DESARROLLADO
+
+-- El objetivo de la clase Main es mostrar el minimo numero de lineas que realizen comportamientos especificos
+-- Actualmente una compilacion del proyecto ocupa 14MB aprox y puede tardar en executarse en equipos modernos hasta un máximo de 5segundos 
+-- No se ha desarrollado todavia ningun comportamiento real asi como ninguna base de datos util
+-- La gui en forma de html,css y js permanece en fase de desarrollo
+
