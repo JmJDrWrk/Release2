@@ -1,0 +1,90 @@
+
+                                    --No recompilation required
+--Error fondo de pantalla en blanco
+←[34mC:\Users\ferna\Desktop\CompilationTest4\Main\base_library.zip←[0m
+←[34mC:\Users\ferna\Desktop\CompilationTest4\Main←[0m
+←[31m16764←[0m
+←[35mb'Main.exe                     16764 Console                    2    29,352 KB\r\n'←[0m
+←[34mhkeyid: ←[0m ←[36mHKEY_USERS\S-1-5-21-2380657998-2941585039-2868151426-1001←[0m
+←[34mbakpath: ←[0m ←[36mC:\Users\ferna\OneDrive\Documentos\CORELDRAW\JEDI NEGRO.png←[0m
+←[35mPATH SERVER: ←[0m ←[32mON←[0m
+←[34mCssWriter contructor joined←[0m
+←[31mError Serving image←[0m
+←[31mhttp://localhost:7654/JEDI NEGRO.png←[0m
+←[31mTesting css←[0m
+←[36m/NEW WRITE/←[0m
+←[36mbody, html{←[0m
+←[36m   background-image: url('http://localhost:7654/JEDI NEGRO.png');←[0m
+←[36m   max-width: 100%;←[0m
+←[36m   max-height: 100%;←[0m
+←[36m   margin: 0px;←[0m
+←[36m   background-size:     cover   ;←[0m
+←[36m   background-repeat:   no-repeat;←[0m
+←[36m   background-position: center center;←[0m
+←[36m   padding-bottom: 0px;←[0m
+←[36m   height: 99%;←[0m
+←[36m}←[0m
+←[34mcssCode: ←[0m ←[36mNone←[0m
+←[35mSERVER STATE: ←[0m←[32mON←[0m←[35m
+GUI STATE: ←[0m←[32mON←[0m
+
+Intentar ejecutar en el cmd manualmente:
+    cd \
+    cd C:\Users\ferna\OneDrive\Documentos\CORELDRAW
+    python -m http.server 7654
+
+Si da error escribir a soporte con la respuesta de fallo del sistema
+Fallo en el firewall de windows al hacer 
+
+--                      recompilation required
+ServerPath.py -- Pedir permisos de administrador
+PyInstaller -- Configurar UAC uniadmin parametro
+
+
+--                      no recompilation required 
+Hacer que el usuario de permisos en el firewall de windows haciendole 
+ejecutar una prueba de firewall 
+
+
+←[34mC:\Users\ferna\Desktop\CompilationTest4\Main\base_library.zip←[0m
+←[34mC:\Users\ferna\Desktop\CompilationTest4\Main←[0m
+←[31m13820←[0m
+←[35mb'Main.exe                     13820 Console                    2    29,720 KB\r\n'←[0m
+←[34mhkeyid: ←[0m ←[36mHKEY_USERS\S-1-5-21-2380657998-2941585039-2868151426-1001←[0m
+←[34mbakpath: ←[0m ←[36mC:\Users\ferna\OneDrive\Documentos\CORELDRAW\JEDI NEGRO.png←[0m
+←[35mPATH SERVER: ←[0m ←[32mON←[0m
+←[34mCssWriter contructor joined←[0m
+←[31mError Serving image←[0m
+←[31mhttp://localhost:7654/JEDI NEGRO.png←[0m
+←[31mTesting css←[0m
+←[36m/NEW WRITE/←[0m
+←[36mbody, html{←[0m
+←[36m   background-image: url('http://localhost:7654/JEDI NEGRO.png');←[0m
+←[36m   max-width: 100%;←[0m
+←[36m   max-height: 100%;←[0m
+←[36m   margin: 0px;←[0m
+←[36m   background-size:     cover   ;←[0m
+←[36m   background-repeat:   no-repeat;←[0m
+←[36m   background-position: center center;←[0m
+←[36m   padding-bottom: 0px;←[0m
+←[36m   height: 99%;←[0m
+←[36m}←[0m
+←[34mcssCode: ←[0m ←[36mNone←[0m
+←[35mSERVER STATE: ←[0m←[32mON←[0m←[35m
+GUI STATE: ←[0m←[32mON←[0m
+←[31mError: The gui has stopped
+←[0m←[35mGUI STATE: ←[0m←[31mOFF←[0m←[31m
+Shutting down server...
+←[0m←[33mCODE: 0000←[0m
+←[35mSERVER STATE: ←[0m←[31mOFF←[0m
+
+
+Implementar mejor sistema de deteccion de fondo
+para usar el por defaults
+
+Error solucionado:
+--  Es posible que en el registro de windows aparecan rutas 
+--  de archivos que ya no existen, de esta forma es necesario 
+--  comprobar que el archivo imagen de fondo existe en la clase CssWriter.py
+
+

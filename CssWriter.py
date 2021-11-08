@@ -48,7 +48,7 @@ class CssWriter():
                 print(colored(line.replace('\n',''), 'cyan'))
 
 
-    def writeCssBackground(self,FILEPATH,PORT):
+    def writeCssBackground(self,FILEPATH,PORT,serverState):
         STATE = 'notWritten\n'
 
         FILENAME = os.path.basename(FILEPATH)
@@ -92,11 +92,13 @@ class CssWriter():
             #self.politeSpace()
 
             self.newElementReference('body, html')
-            
-            if(FILEPATH == ''):
-                self.newParameter("background-image: url('https://www.teahub.io/photos/full/33-334325_windows-10-default-background-black.png')")
-            else:
+
+            print(colored(f'Server State: {serverState}', 'yellow'))
+            if(serverState == 'ON'):
                 self.newParameter(f"background-image: url('{BACKPATH}')")
+            else:
+                print(colored('The image server failed; posible causes:\n-Firewall not enabled\n-Port 7654 in use\n-Your background image is not an image\n-Python not installed'))
+                self.newParameter("background-image: url('https://www.teahub.io/photos/full/33-334325_windows-10-default-background-black.png')")
 
             print(colored(BACKPATH, 'red'))
             self.newParameter('max-width: 100%')

@@ -29,9 +29,8 @@ serverState = ServerPath.ServePathAtNewThread(backpath,'7654')
 print(colored('PATH SERVER: ', 'magenta'), colored(serverState, 'green'))
 
 cssWr = CssWriter('web/background.css')
-cssCode = cssWr.writeCssBackground(backpath,'7654')
+cssCode = cssWr.writeCssBackground(backpath,'7654',serverState)
 print(colored('cssCode: ', 'blue'), colored(cssCode, 'cyan'))
-
 
 guidir = 'web'
 guimain = 'System.html'

@@ -14,13 +14,20 @@ class ServerPath():
             #print(colored(f'SERVER at port: {PORT}', 'cyan'))
             basepath = PATH.replace(("\\"+os.path.basename(PATH)), "")
             server_setup = f'cd \\ && cd {basepath} && python -m http.server {PORT}'
-            #print(colored(server_setup, 'red'))
+            print(colored(f'server_setup: {server_setup}', 'red'))
             #os.chdir(basepath)
             # subprocess.Popen(server_setup,shell=True,stdout=subprocess.STDOUT,stderr=subprocess.STDOUT,stdin=subprocess.DEVNULL)
             try:
                 subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
+                state = 'ON'
             except:
-                print(colored('Error Serving image', 'red'))
+                state = 'OFF'
+                print(colored(f'Error Serving image on port: {PORT}', 'red'))
+                # try:
+                #     print('Trying to serve on another port')
+                #     subprocess.call(f'python -m http.server {PORT}', shell=True, cwd=basepath)
+                # except:
+                #     print(colored(f'Error Serving image on port: {PORT}', 'red'))
             #os.system(f'python -m http.server {PORT}')
 
         try:

@@ -55,3 +55,6 @@ PROBLEMA DE COMPILACION DEL MODULO eel
             
 --Compilador.bat {Archivo ejecutable por lotes que agiliza la compilacion del proyecot: apunta a Main.py}
 
+--Colored Cmd :ECHORED
+%Windir%\System32\WindowsPowerShell\v1.0\Powershell.exe write-host -foregroundcolor Red %1
+goto:eof

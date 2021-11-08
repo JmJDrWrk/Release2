@@ -1,4 +1,9 @@
 
+.advertisement{
+    color: red;
+    text-align: center;
+}
+
 body{
    /*background-image: url("src/backgroundImage.jpg"); */
     /*background-image: url("C:/Users/Jaime/Pictures/bkcj.jpg");*/
