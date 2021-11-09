@@ -12,6 +12,7 @@ from ServerPath import *
 from CssWriter import *
 from GuiManager import *
 from listTask import *
+from Server import *
 
 for line in sys.path: 
     print(colored(line, 'blue'))
@@ -25,8 +26,14 @@ print(colored('hkeyid: ', 'blue'), colored(hkeyid, 'cyan'))
 backpath = Wintools.getBackgroundImagePath(hkeyid)
 print(colored('bakpath: ', 'blue'), colored(backpath, 'cyan'))
 
-serverState = ServerPath.ServePathAtNewThread(backpath,'7654')
-print(colored('PATH SERVER: ', 'magenta'), colored(serverState, 'green'))
+#Serve Image 
+server1 = Server(backpath, 7654)
+server1.start_server()
+
+serverState = 'ON'
+
+# serverState = ServerPath.ServePathAtNewThread(backpath,'7654')
+# print(colored('PATH SERVER: ', 'magenta'), colored(serverState, 'green'))
 
 cssWr = CssWriter('web/background.css')
 cssCode = cssWr.writeCssBackground(backpath,'7654',serverState)
