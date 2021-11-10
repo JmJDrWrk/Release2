@@ -7,7 +7,6 @@ import os
 
 
 class Server():
-    
     def __init__(self, DIRECTORY, PORT):
         self.directory = DIRECTORY.replace(os.path.basename(DIRECTORY),'')
         self.port = PORT
